@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning1/badge.dart';
 import 'package:learning1/quiz/azmon.dart';
 import 'package:learning1/p_g_builder.dart';
 import 'package:learning1/pageview.dart';
@@ -23,7 +24,7 @@ Set<String> nameItems = {
   'PageView',
   'P_V.Builder',
   'Quiz',
-  'PageView3',
+  'Badge',
   'PageView4',
   'PageView5'
 };
@@ -35,6 +36,7 @@ List<String> urlimg = [
   'assest/pageview.png',
   'assest/pageview.png',
 ];
+List<String> select = [];
 styletxthome() {
   return TextStyle(
       fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black);
@@ -44,7 +46,7 @@ List<Widget> pageitem = [
   Pageview1(),
   P_V_Builder(),
   Azmoon(),
-  Pageview1(),
+  CallBadge(),
   Pageview1(),
   Pageview1(),
 ];
