@@ -58,7 +58,7 @@ class _CallBadgeState extends State<CallBadge> {
           animationType: BadgeAnimationType.scale,
           badgeContent: Text(
             select.length.toString(),
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 16),
           ),
           badgeColor: Colors.green,
           shape: BadgeShape.circle,
