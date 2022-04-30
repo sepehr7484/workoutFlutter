@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:learning1/tools.dart';
 import 'package:badges/badges.dart';
@@ -85,24 +87,31 @@ class ShowSelect extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: GridView.builder(
-          itemCount: select.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-          itemBuilder: (ctx, index) {
-            return GestureDetector(
-              onTap: () {
-                select.remove(select[index]);
-              },
-              child: Container(
-                margin: EdgeInsets.all(10),
-                color: Colors.amber,
-                child: Center(
-                  child: Text(select[index]),
+      body: RefreshIndicator(
+        onRefresh: _refrash,
+        child: GridView.builder(
+            itemCount: select.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
+            itemBuilder: (ctx, index) {
+              return GestureDetector(
+                onTap: () {
+                  select.remove(select[index]);
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  color: Colors.amber,
+                  child: Center(
+                    child: Text(select[index]),
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+      ),
     );
+  }
+
+  Future<void> _refrash() {
+    return Future.delayed(const Duration(seconds: 1));
   }
 }

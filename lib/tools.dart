@@ -3,6 +3,7 @@ import 'package:learning1/badge.dart';
 import 'package:learning1/quiz/azmon.dart';
 import 'package:learning1/p_g_builder.dart';
 import 'package:learning1/pageview.dart';
+import 'package:learning1/refresh.dart';
 
 // ignore: non_constant_identifier_names
 app_bar(String title, Color color) {
@@ -25,7 +26,7 @@ Set<String> nameItems = {
   'P_V.Builder',
   'Quiz',
   'Badge',
-  'PageView4',
+  'Refresh',
   'PageView5'
 };
 List<String> urlimg = [
@@ -33,7 +34,7 @@ List<String> urlimg = [
   'assest/builder.png',
   'assest/choose.png',
   'assest/pageview.png',
-  'assest/pageview.png',
+  'assest/refr.png',
   'assest/pageview.png',
 ];
 List<String> select = [];
@@ -47,7 +48,7 @@ List<Widget> pageitem = [
   P_V_Builder(),
   Azmoon(),
   CallBadge(),
-  Pageview1(),
+  Refreshing(),
   Pageview1(),
 ];
 var imgcard = [
@@ -60,3 +61,19 @@ var imgcard = [
 //                 question[quizindex],
 //                 style: styletxthome(),
 //               ),
+List<String> languge = [
+  'C#',
+  'C++',
+  'C',
+  'Java',
+  'Dart',
+  'Python',
+  'Go',
+  'C++',
+  'C',
+  'Java',
+  'Dart',
+  'Python',
+  'Go',
+  'Ruby'
+];
